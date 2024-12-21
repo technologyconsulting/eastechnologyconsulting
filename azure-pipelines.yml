@@ -13,6 +13,6 @@ steps:
 - task: AzureStaticWebApp@0
   inputs:
     output_location: 'wwwroot'
-    azure_static_web_apps_api_token: DEPLOYMENT_TOKEN
+    azure_static_web_apps_api_token: $(DEPLOYMENT_TOKEN)
     production_branch: 'master'
 
