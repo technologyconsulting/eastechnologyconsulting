@@ -81,6 +81,12 @@ body {
 	padding: 0.5rem;
 }
 
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -113,6 +119,36 @@ section {
 	font-weight: bold;
 }
 
+.header__build--latest {
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+.header__build--previous, .header__nav {
+	position: relative;
+	font-size: 0.8rem;
+	font-weight:700;
+	font-variant: small-caps;
+}
+
+.header__build--previous::after {
+	content: "->";
+	position: absolute;
+	top: 2px;
+	left: 100px;
+}
+
+.header__nav {
+	padding-left: 20px;
+}
+
+.header__nav::after {
+	content: "<-";
+	position: absolute;
+	top: 2px;
+	left: 0px;
+}
+
 .profile {
 	flex: 1;
 	min-width: 20rem;
@@ -125,11 +161,25 @@ section {
 	margin-bottom: 1rem;
 }
 
+.profile__contact__method {
+	font-size: 0.8rem;
+	font-weight: 700;
+	font-variant: small-caps;
+}
+
+.profile__skillsets__card {
+	margin-top: 1rem;
+}
+
 .training {
 	min-width: 20rem;
 	max-width: 25.27rem;
 }
 
 .training__card {
+	margin-top: 1rem;
+}
+
+.build__card {
 	margin-top: 1rem;
 }
