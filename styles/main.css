@@ -126,7 +126,7 @@ section {
 
 .header__build--previous, .header__nav {
 	position: relative;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	font-weight:700;
 	font-variant: small-caps;
 }
@@ -135,7 +135,7 @@ section {
 	content: "->";
 	position: absolute;
 	top: 2px;
-	left: 100px;
+	left: 125px;
 }
 
 .header__nav {
@@ -162,13 +162,70 @@ section {
 }
 
 .profile__contact__method {
-	font-size: 0.8rem;
+	font-size: 1rem;
 	font-weight: 700;
 	font-variant: small-caps;
 }
 
+.profile__contact__method-colon {
+	font-size: 0.8rem;
+}
+
 .profile__skillsets__card {
 	margin-top: 1rem;
+}
+
+.profile__work--last__10__years {
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.profile__work__card {
+	margin-top: 1rem;
+}
+
+.profile__work__details {
+	display: flex;
+	margin: 0;
+}
+
+.profile__work__type {
+	width: fit-content;
+	color: whitesmoke;
+	background-color:forestgreen;
+	padding: 0.1rem 0.5rem;
+	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 700;
+	font-variant: small-caps;
+	
+
+}
+
+.profile__work__type-colon {
+	font-size: 0.8rem;
+}
+
+.profile__work__date {
+	flex: 1;
+	text-align: end;
+	margin: auto 0;
+	
+}
+
+.profile__work--previous {
+	position: relative;
+	font-size: 1rem;
+	font-weight:700;
+	font-variant: small-caps;
+	margin-top: 1rem;
+}
+
+.profile__work--previous::after {
+	content: "->";
+	position: absolute;
+	top: 2px;
+	left: 125px;
 }
 
 .training {
