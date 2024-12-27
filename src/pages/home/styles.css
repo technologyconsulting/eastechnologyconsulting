@@ -161,39 +161,47 @@ section {
 	margin-bottom: 1rem;
 }
 
-.profile__contact__method {
+.profile__contact-details__method {
 	font-size: 1rem;
 	font-weight: 700;
 	font-variant: small-caps;
 }
 
-.profile__contact__method-colon {
+.profile__contact-details__method-colon {
 	font-size: 0.8rem;
 }
 
-.profile__skillsets__card {
+.profile__skill-sets__card {
 	margin-top: 1rem;
 }
 
-.profile__work--last__10__years {
+.profile__projects__card {
+	margin-top: 1rem;
+}
+
+.profile__work-history {
+	width: 100%;
+}
+
+.profile__work-history--last__10__years {
 	font-size: 1rem;
 	font-weight: 400;
 }
 
-.profile__work__card {
+.profile__work-history__card {
 	margin-top: 1rem;
 }
 
-.profile__work__details {
+.profile__work-history__details {
 	display: flex;
 	margin: 0;
 }
 
-.profile__work__type {
+.profile__work-history__type {
 	width: fit-content;
 	color: whitesmoke;
 	background-color:forestgreen;
-	padding: 0.1rem 0.5rem;
+	padding: 0rem 0.5rem 0.2rem 0.5rem;
 	border-radius: 10px;
 	font-size: 1rem;
 	font-weight: 700;
@@ -202,18 +210,18 @@ section {
 
 }
 
-.profile__work__type-colon {
+.profile__work-history__type-colon {
 	font-size: 0.8rem;
 }
 
-.profile__work__date {
+.profile__work-history__date {
 	flex: 1;
 	text-align: end;
 	margin: auto 0;
 	
 }
 
-.profile__work--previous {
+.profile__work-history--previous {
 	position: relative;
 	font-size: 1rem;
 	font-weight:700;
@@ -221,7 +229,7 @@ section {
 	margin-top: 1rem;
 }
 
-.profile__work--previous::after {
+.profile__work-history--previous::after {
 	content: "->";
 	position: absolute;
 	top: 2px;

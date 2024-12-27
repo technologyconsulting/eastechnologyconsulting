@@ -2,3 +2,11 @@
 *.swp
 *.un~
 *.yml
+
+node_modules/
+dist/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
