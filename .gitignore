@@ -4,6 +4,7 @@
 *.yml
 
 node_modules/
+dist/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
