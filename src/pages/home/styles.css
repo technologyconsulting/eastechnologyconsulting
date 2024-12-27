@@ -27,6 +27,24 @@ ol[role="list"] {
 	padding-left: 0;
 }
 
+ul,
+ol {
+	/* list-style: none;
+	margin: 0; */
+	list-style: none;
+	padding-left: 0;
+}
+
+ul,
+ol > li {
+	margin-left: 0.8em;
+}
+
+li:not([class])::before {
+	content: "- ";
+	margin-left: -0.8em; /* Pull the dash back into the margin */
+  }
+
 /* Set core root defaults */
 html:focus-within {
 	scroll-behavior: smooth;
@@ -247,6 +265,10 @@ section {
 	flex: 0;
 	min-width: 20rem;
 	max-width: 25.27rem;
+}
+
+.training__date {
+	margin-top: 0.5rem;
 }
 
 .training__card {
