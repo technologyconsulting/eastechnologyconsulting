@@ -63,6 +63,7 @@ module.exports = {
                 return chunk === 'home' ? 'styles.css' : `${chunk}/styles.css`;
             },
             }),
+       
         ],
     optimization: {
         minimizer: [
@@ -70,5 +71,10 @@ module.exports = {
         `...`,
         new CssMinimizerPlugin(),
         ],
-    }, 
+    },
+    devServer: {
+        static: './dist',
+        hot: true,
+        port: 3000
+        }
 };
