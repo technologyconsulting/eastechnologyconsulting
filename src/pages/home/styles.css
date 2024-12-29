@@ -190,16 +190,46 @@ h2 {
 	word-wrap: break-word;
 	word-break: break-word;
 	overflow-wrap: break-word;
+	margin-bottom: 0;
+	container-type: inline-size;
+    container-name: profile;
 }
 
 .profile__intro {
 	margin-bottom: 1rem;
 }
 
+.profile__contact__title {
+	margin-bottom: 1rem;
+}
+
+.profile__contact-details {
+	margin-bottom: 0.5rem;
+}
+
 .profile__contact-details__method {
+	width: fit-content;
+	color: whitesmoke;
+	background-color:forestgreen;
+	padding: 0rem 0.5rem 0.2rem 0.5rem;
+	border-radius: 10px;
 	font-size: 1rem;
 	font-weight: 700;
 	font-variant: small-caps;
+	display: block; 
+}
+
+@container profile (min-width: 500px) {
+	.profile__contact-details {
+		margin-bottom: 0.75rem;
+	}
+
+	.profile__contact-details:last-child {
+		margin-bottom: 1.25rem;
+	}
+    .profile__contact-details__method {
+        display: inline;
+    }
 }
 
 .profile__contact-details__method-colon {
@@ -230,6 +260,10 @@ h2 {
 	color: black;
 }
 
+.profile__work-history__card:first-child {
+	margin-top: 0.25rem;
+}
+
 .profile__work-history__card {
 	margin-top: 1rem;
 }
@@ -248,8 +282,6 @@ h2 {
 	font-size: 1rem;
 	font-weight: 700;
 	font-variant: small-caps;
-	
-
 }
 
 .profile__work-history__type-colon {
@@ -268,7 +300,6 @@ h2 {
 	font-size: 1rem;
 	font-weight:700;
 	font-variant: small-caps;
-	margin-top: 1rem;
 	color: forestgreen;
 }
 

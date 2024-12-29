@@ -69,17 +69,6 @@ module.exports = {
     },
     plugins,
     optimization: {
-        splitChunks: {
-            // This ensures shared CSS is bundled together
-            cacheGroups: {
-              styles: {
-                name: 'styles',
-                test: /\.css$/,
-                chunks: 'all',
-                enforce: true,
-              },
-            },
-          },
         minimizer: [
         // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
         `...`,
