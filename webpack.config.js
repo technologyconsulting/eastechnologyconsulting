@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require('path');
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -36,6 +37,18 @@ const generateHtmlPlugins = () => {
     })
 }
 
+const plugins = [
+    ...generateHtmlPlugins(),
+    new MiniCssExtractPlugin({
+        filename: (pathData) => {
+            // Get the chunk name
+            const chunk = pathData.chunk.name;
+            return chunk === 'home' ? 'styles.[contenthash].css' : `${chunk}/styles.[contenthash].css`;
+        },
+        }),
+   
+];
+
 module.exports = {
     entry: generateEntryPoints(),
     output: {
@@ -54,18 +67,19 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        ...generateHtmlPlugins(),
-        new MiniCssExtractPlugin({
-            filename: (pathData) => {
-                // Get the chunk name
-                const chunk = pathData.chunk.name;
-                return chunk === 'home' ? 'styles.css' : `${chunk}/styles.css`;
-            },
-            }),
-       
-        ],
+    plugins,
     optimization: {
+        splitChunks: {
+            // This ensures shared CSS is bundled together
+            cacheGroups: {
+              styles: {
+                name: 'styles',
+                test: /\.css$/,
+                chunks: 'all',
+                enforce: true,
+              },
+            },
+          },
         minimizer: [
         // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
         `...`,
@@ -76,5 +90,5 @@ module.exports = {
         static: './dist',
         hot: true,
         port: 3000
-        }
+    }
 };

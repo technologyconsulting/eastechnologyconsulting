@@ -1,0 +1,12 @@
+.training {
+	min-width: 20rem;
+	max-width: 25.27rem;
+}
+
+.training__card:first-child {
+	margin-top: 0.25rem;
+}
+
+.training__card {
+	margin-top: 1rem;
+}

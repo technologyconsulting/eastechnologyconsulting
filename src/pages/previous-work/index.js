@@ -1,1 +1,2 @@
-import './styles.css';
+import '../home/styles.css';
+import '../previous-work/styles.css'
