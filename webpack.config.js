@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const generateEntryPoints = () => {
     const entries = {};
-    const htmlFiles = glob.sync('./src/pages/**/index.html');
+    const htmlFiles = glob.sync('./src/pages/**/+(index|@)*.html');
     
     htmlFiles.forEach(htmlFile => {
         const chunk = path.dirname(htmlFile)
@@ -21,16 +21,33 @@ const generateEntryPoints = () => {
 };
 
 const generateHtmlPlugins = () => {
-    const files = glob.sync('./src/pages/**/index.html');
+    const files = glob.sync('./src/pages/**/+(index|@)*.html');
     
     return files.map(file => {
         const chunk = path.dirname(file)
             .replace(/\\/g, '/')
             .replace('src/pages/', '')
 
+        // Get the actual filename without path
+        const fileName = path.basename(file, '.html');
+        
+        // Determine output filename based on the input filename
+        let outputFileName;
+        if (chunk === 'home' && fileName === 'index') {
+            outputFileName = 'index.html';
+        } else if (fileName === 'index') {
+            outputFileName = `${chunk}/index.html`;
+        } else if (fileName.startsWith('@')) {
+            // Put @*.html files in root
+            outputFileName = `${fileName}/index.html`;
+        }else {
+            // For @*.html files, maintain their original name
+            outputFileName = `${chunk}/${fileName}/index.html`;
+        }
+
         return new HtmlWebpackPlugin({
             template: file,
-            filename: chunk === 'home' ? 'index.html' : `${chunk}/index.html`,
+            filename: outputFileName,
             chunks: [chunk],
             inject: true
         })
@@ -78,6 +95,25 @@ module.exports = {
     devServer: {
         static: './dist',
         hot: true,
-        port: 3000
+        port: 3000,
+        historyApiFallback: {
+            rewrites: [
+                // For the home page
+                { from: /^\/$/, to: '/index.html' },
+                
+                // For @handle URLs with .html
+                { from: /^\/@[^/]+\.html$/, to: context => 
+                    `${context.parsedUrl.pathname.replace('.html', '')}/index.html` 
+                },
+                
+                // For @handle URLs without .html
+                { from: /^\/@[^/]+$/, to: context => 
+                    `${context.parsedUrl.pathname}/index.html` 
+                },
+                
+                // For other pages
+                { from: /^\/[^@][^/]+$/, to: context => `${context.parsedUrl.pathname}/index.html` }
+            ]
+        }
     }
 };
