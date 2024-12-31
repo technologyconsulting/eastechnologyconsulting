@@ -62,6 +62,12 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -94,28 +100,19 @@ select {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: "Poppins", serif;
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0.5rem;
 }
 
-a, a:active, a:hover, a:visited {
-	text-decoration: none;
-	color: inherit;
-	cursor: pointer;
-}
-
 main {
-	display: flex;
-	flex-wrap: wrap;
+	flex: 1;
 }
 
-@media (min-width: 656px) {
-	main {
-		column-gap: 1rem;
-	}
-}
+
 
 section {
 	margin-bottom: 1rem;

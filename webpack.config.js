@@ -4,6 +4,7 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { watchFile } = require("fs");
 
 const generateEntryPoints = () => {
     const entries = {};
@@ -106,7 +107,14 @@ module.exports = {
     },
     devServer: {
         static: './dist',
+        watchFiles: {
+             paths: ['./src/pages/**/*'],
+             options: {
+                usePolling: false,
+             }
+        },
         hot: true,
+        liveReload: true,
         port: 3000,
         historyApiFallback: {
             rewrites: [
