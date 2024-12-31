@@ -92,9 +92,16 @@ module.exports = {
     module: {
         rules: [
             {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader'],
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
+            {
+                test: /\.ico$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'favicon.ico'  // Output directly to root
+                }
+            }
         ],
     },
     plugins,
