@@ -21,7 +21,7 @@ const generateEntryPoints = () => {
 };
 
 const generateHtmlPlugins = () => {
-    const files = glob.sync('./src/pages/**/+(index|@)*.html');
+    const files = glob.sync('./src/pages/**/index.html');
     
     return files.map(file => {
         const chunk = path.dirname(file)
@@ -30,26 +30,38 @@ const generateHtmlPlugins = () => {
 
         // Get the actual filename without path
         const fileName = path.basename(file, '.html');
+
+        // Extract handle from path if it exists
+        const handleMatch = chunk.match(/@[^/]+/);
+        const handle = handleMatch ? handleMatch[0] : '';
+
+        // Determine if we're in a subdirectory of a handle
+        const isSubDirectory = chunk.split('/@')[1]?.includes('/') || false;
+        
+        // For subdirectories, remove the subdirectory part for parent links
+        const handlePath = isSubDirectory ? `/${handle}` : handle;
         
         // Determine output filename based on the input filename
         let outputFileName;
         if (chunk === 'home' && fileName === 'index') {
             outputFileName = 'index.html';
-        } else if (fileName === 'index') {
+        } else if (chunk.includes('/@')) {
+            // Handle @username directories - keep them at root level
+            const handlePath = chunk.split('/@')[1];
+            outputFileName = `@${handlePath}/index.html`;
+        } else {
+            // All other pages
             outputFileName = `${chunk}/index.html`;
-        } else if (fileName.startsWith('@')) {
-            // Put @*.html files in root
-            outputFileName = `${fileName}/index.html`;
-        }else {
-            // For @*.html files, maintain their original name
-            outputFileName = `${chunk}/${fileName}/index.html`;
         }
 
         return new HtmlWebpackPlugin({
             template: file,
             filename: outputFileName,
             chunks: [chunk],
-            inject: true
+            inject: true,
+            templateParameters: {
+                handle: handlePath
+            }
         })
     })
 }

@@ -1,0 +1,7 @@
+.build__card:first-child {
+	margin-top: 0.25rem;
+}
+
+.build__card {
+	margin-top: 1rem;
+}
