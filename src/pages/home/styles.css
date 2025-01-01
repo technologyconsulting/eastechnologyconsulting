@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -16,63 +16,66 @@ figure,
 blockquote,
 dl,
 dd {
-	margin: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 ul,
 ol {
-	/* list-style: none;
+  /* list-style: none;
 	margin: 0; */
-	list-style: none;
-	padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 ul,
 ol > li {
-	margin-left: 0.8em;
+  margin-left: 0.8em;
 }
 
 li:not([class])::before {
-	content: "- ";
-	margin-left: -0.8em; /* Pull the dash back into the margin */
-  }
+  content: "- ";
+  margin-left: -0.8em; /* Pull the dash back into the margin */
+}
 
 /* Set core root defaults */
 html:focus-within {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
-a, a:active, a:hover, a:visited {
-	text-decoration: none;
-	color: inherit;
-	cursor: pointer;
+a,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -80,268 +83,354 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
-	}
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	font-family: "Poppins", serif;
-	max-width: 1140px;
-	margin: 0 auto;
-	padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", serif;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
 
 main {
-	flex: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-
-
 section {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
-	color: royalblue;
+  color: royalblue;
+}
+
+hr {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  margin-bottom: 0rem;
+}
+
+.header__contact-us {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.header__contact-us a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  background: forestgreen;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .header__title--small {
-	display: block;
-	color: forestgreen;
+  display: block;
+  color: forestgreen;
+  font-size: 1.75rem;
+  text-align: center;
 }
 
 .header__title--medium {
-	display: none;
+  display: none;
 }
 
 @media (min-width: 585px) {
-	.header__title--small {
-		display: none;
-	}
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-	.header__title--medium {
-		display: block;
-		color: forestgreen;
-	}
+  .header__contact-us {
+    display: flex;
+    margin-top: 0rem;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  .header__contact-us a {
+    width: fit-content;
+  }
+
+  .header__title--small {
+    display: none;
+  }
+
+  .header__title--medium {
+    display: block;
+    color: forestgreen;
+  }
+
+  .header__contact-us a {
+    display: inline-block;
+  }
 }
 
 .header__title__subtitle--medium {
-	color: royalblue;
+  color: royalblue;
 }
 
 .header__title__subtitle--small {
-	font-size: 1.75rem;
-	font-weight: bold;
-	color: royalblue;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: royalblue;
 }
 
 .header__build--latest {
-	font-size: 0.8rem;
-	font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
-.header__build--previous, .header__nav {
-	position: relative;
-	font-size: 1rem;
-	font-weight:700;
-	font-variant: small-caps;
-	color: forestgreen;
+.header__build--previous,
+.header__nav {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: forestgreen;
 }
 
 .header__build--previous::after {
-	content: "->";
-	position: absolute;
-	top: 2px;
-	padding-left: 0.25rem;
+  content: "->";
+  position: absolute;
+  top: 2px;
+  padding-left: 0.25rem;
 }
 
 .header__nav {
-	padding-left: 20px;
+  padding-left: 20px;
 }
 
 .header__nav::after {
-	content: "<-";
-	position: absolute;
-	top: 2px;
-	left: 0px;
+  content: "<-";
+  position: absolute;
+  top: 2px;
+  left: 0px;
 }
 
-.profile {
-	flex: 1;
-	min-width: 20rem;
-	word-wrap: break-word;
-	word-break: break-word;
-	overflow-wrap: break-word;
-	margin-bottom: 0;
-	container-type: inline-size;
-    container-name: profile;
+.hero {
+  margin-bottom: 0rem;
+}
+
+.services {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.services__contact-us {
+  justify-self: flex-end;
+  margin-bottom: 0rem;
+}
+
+.services__contact-us a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  background: forestgreen;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@media (min-width: 585px) {
+  .services__contact-us {
+    display: none;
+  }
+}
+
+/* .profile {
+  flex: 1;
+  min-width: 20rem;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 0;
+  container-type: inline-size;
+  container-name: profile;
 }
 
 .profile__intro {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .profile__contact__title {
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .profile__contact-details {
-	margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .profile__contact-details__method {
-	width: fit-content;
-	color: whitesmoke;
-	background-color:forestgreen;
-	padding: 0rem 0.5rem 0.2rem 0.5rem;
-	border-radius: 10px;
-	font-size: 1rem;
-	font-weight: 700;
-	font-variant: small-caps;
-	display: block; 
+  width: fit-content;
+  color: whitesmoke;
+  background-color: forestgreen;
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  display: block;
 }
 
 @container profile (min-width: 500px) {
-	.profile__contact-details {
-		margin-bottom: 0.75rem;
-	}
+  .profile__contact-details {
+    margin-bottom: 0.75rem;
+  }
 
-	.profile__contact-details:last-child {
-		margin-bottom: 1.25rem;
-	}
-    .profile__contact-details__method {
-        display: inline;
-    }
+  .profile__contact-details:last-child {
+    margin-bottom: 1.25rem;
+  }
+  .profile__contact-details__method {
+    display: inline;
+  }
 }
 
 .profile__contact-details__method-colon {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .profile__skill-sets__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .profile__projects--last__5__years {
-	font-size: 1rem;
-	font-weight: 400;
-	color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
 }
 
 .profile__projects__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .profile__work-history {
-	width: 100%;
+  width: 100%;
 }
 
 .profile__work-history--last__10__years {
-	font-size: 1rem;
-	font-weight: 400;
-	color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
 }
 
 .profile__work-history__card:first-child {
-	margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .profile__work-history__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .profile__work-history__details {
-	display: flex;
-	margin: 0;
+  display: flex;
+  margin: 0;
 }
 
 .profile__work-history__type {
-	width: fit-content;
-	color: whitesmoke;
-	background-color:forestgreen;
-	padding: 0rem 0.5rem 0.2rem 0.5rem;
-	border-radius: 10px;
-	font-size: 1rem;
-	font-weight: 700;
-	font-variant: small-caps;
+  width: fit-content;
+  color: whitesmoke;
+  background-color: forestgreen;
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
 }
 
 .profile__work-history__type-colon {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .profile__work-history__date {
-	flex: 1;
-	text-align: end;
-	margin: auto 0;
-	
+  flex: 1;
+  text-align: end;
+  margin: auto 0;
 }
 
 .profile__work-history--previous {
-	position: relative;
-	font-size: 1rem;
-	font-weight:700;
-	font-variant: small-caps;
-	color: forestgreen;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: forestgreen;
 }
 
 .profile__work-history--previous::after {
-	content: "->";
-	position: absolute;
-	top: 2px;
-	padding-left: 0.25rem;
+  content: "->";
+  position: absolute;
+  top: 2px;
+  padding-left: 0.25rem;
 }
 
 .training {
-	flex: 0;
-	min-width: 20rem;
-	max-width: 25.27rem;
+  flex: 0;
+  min-width: 20rem;
+  max-width: 25.27rem;
 }
 
 .training--previous {
-	position: relative;
-	font-size: 1rem;
-	font-weight:700;
-	font-variant: small-caps;
-	color: forestgreen;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  color: forestgreen;
 }
 
 .training--previous::after {
-	content: "->";
-	position: absolute;
-	top: 2px;
-	padding-left: 0.25rem;
+  content: "->";
+  position: absolute;
+  top: 2px;
+  padding-left: 0.25rem;
 }
 
 .training__date {
-	margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .training__date + .training__card {
-	margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .training__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .build__card {
-	margin-top: 1rem;
-}
+  margin-top: 1rem;
+} */
