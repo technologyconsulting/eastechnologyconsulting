@@ -35,13 +35,11 @@
   <body>
     <header class="header">
       <section class="header__profile-picture">
-        <section class="header__profile-picture--left">
+        <section class="header__profile-picture--right">
           <img
             src="<%=require('../../../assets/9by16-simon-edwards-front.jpg')%>"
             alt="Profile picture of Simon Edwards - Infrastructure Consultant"
           />
-        </section>
-        <section class="header__profile-picture--right">
           <h1 class="header__title--medium">
             Simon Edwards -
             <span class="header__title__subtitle--medium"
@@ -78,15 +76,6 @@
     <main>
       <section class="profile">
         <section class="profile__details">
-          <!-- <p class="profile__intro">
-            Hi, I&apos;m Simon an infrastructure consultant with +25 years
-            experience. I specialise in on-premises and cloud infrastructure
-            with a focus on security, scalability, and resilience.
-          </p>
-          <p class="profile__intro">
-            I also blend my infrastructure and software engineering skillsets to
-            perform devops activities.
-          </p> -->
           <section class="profile__contact">
             <h2 class="profile__contact__title">Contact Me</h2>
             <p class="profile__contact-details">
@@ -129,7 +118,13 @@
         </section>
         <section class="profile__skill-sets">
           <h2>Skill Sets</h2>
-          <ul role="list">
+          <input type="radio" id="tab1" name="tabs" checked />
+          <label for="tab1">Infrastructure</label>
+
+          <input type="radio" id="tab2" name="tabs" />
+          <label for="tab2">Software</label>
+
+          <ul role="list" class="tab-content" id="tab1-content">
             <li class="profile__skill-sets__card">
               <h3>Microsoft Stack</h3>
               <ul>
@@ -144,6 +139,45 @@
             </li>
             <li class="profile__skill-sets__card">
               <h3>Microsoft 365</h3>
+              <ul>
+                <li>Exchange Online</li>
+                <li>SharePoint</li>
+                <li>Teams</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul role="list" class="tab-content" id="tab2-content">
+            <li class="profile__skill-sets__card">
+              <h3>Git, GitHub, Azure Repo</h3>
+              <ul>
+                <li>Exchange Online</li>
+                <li>SharePoint</li>
+                <li>Teams</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>HTML</h3>
+              <ul>
+                <li>Active Directory Directory Services (ADDS)</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>CSS, SASS, Tailwind</h3>
+              <ul>
+                <li>Azure Active Directory (AAD)</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>JavaScript, React, Next</h3>
+              <ul>
+                <li>Exchange Online</li>
+                <li>SharePoint</li>
+                <li>Teams</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>Node, Express</h3>
               <ul>
                 <li>Exchange Online</li>
                 <li>SharePoint</li>

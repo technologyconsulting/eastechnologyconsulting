@@ -134,17 +134,19 @@ h2 {
 }
 
 .header__profile-picture {
-  display: flex;
-  gap: 1rem;
   margin-bottom: 0;
 }
-.header__profile-picture--left {
-  max-width: 5rem;
-  margin-bottom: 0;
-}
+
 .header__profile-picture--right {
   min-width: 12rem;
   margin-bottom: 0;
+}
+
+.header__profile-picture--right > img {
+  float: left;
+  max-width: 5rem;
+  margin: 0.25rem 0.5rem 0.5rem 0;
+  border: 5px solid forestgreen;
 }
 
 .header__profile-details {
@@ -173,7 +175,7 @@ h2 {
   color: royalblue;
 }
 
-@media (min-width: 585px) {
+@media (min-width: 602px) {
   .header__title--small {
     display: none;
   }
@@ -273,6 +275,46 @@ h2 {
   font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
+.profile__skill-sets input[type="radio"] {
+  display: none;
+}
+
+.profile__skill-sets label {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 0.5rem;
+  background: #e0e0e0;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+  display: none;
+  /* padding: 20px; */
+  /* border: 1px solid #ddd; */
+  margin-top: -1px !important;
+}
+
+#tab1:checked ~ #tab1-content,
+#tab2:checked ~ #tab2-content {
+  display: block;
+}
+
+#tab1:checked,
+#tab2:checked {
+  color: white;
+  background: forestgreen;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked + label,
+#tab2:checked + label {
+  color: white;
+  background: forestgreen;
+  border: 1px solid forestgreen;
+}
+
 .profile__skill-sets__card {
   margin-top: 1rem;
 }
@@ -281,6 +323,10 @@ h2 {
   font-size: 1rem;
   font-weight: 400;
   color: black;
+}
+
+.profile__projects__card:first-child {
+  margin-top: 0.5rem;
 }
 
 .profile__projects__card {
