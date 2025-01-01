@@ -1,228 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-		<!-- Viewport settings for responsive design -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Page title -->
-		<title>Simon Edwards - Profile and Portfolio</title>
+    <!-- Page title -->
+    <title>Simon Edwards - Profile and Portfolio</title>
 
-		<!-- Meta description for SEO -->
-		<meta
-			name="description"
-			content="Simon Edwards contact details, work, projects, skill sets and training history."
-		/>
+    <!-- Meta description for SEO -->
+    <meta
+      name="description"
+      content="Simon Edwards contact details, work, projects, skill sets and training history."
+    />
 
-		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-		<!-- CSS stylesheets -->
-		<!-- <link rel="stylesheet" type="text/css" href="/styles.css" /> -->
+    <!-- CSS stylesheets -->
+    <!-- <link rel="stylesheet" type="text/css" href="/styles.css" /> -->
 
-		<!-- Google Fonts example -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet"
-		/>
+    <!-- Google Fonts example -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- JavaScript -->
-		<!-- <script src="/bundle.js" defer></script> -->
-	</head>
-	<body>
-		<header>
-			<h1 class="header__title--medium">Simon Edwards - <span class="header__title__subtitle--medium">Profile & Portfolio</span></h1>
-			<h1 class="header__title--small">Simon Edwards</h1>
-			<p class="header__title--small header__title__subtitle--small">
-				Profile & Portfolio
-			</p>
-			<p class="header__build--latest">
-				Latest: Built with HTML, CSS, & JavaScript and deployed using Terraform & Azure
-				DevOps on Azure Static Web App.
-			</p>
-			<p class="header__build--previous"><a href="<%= handle %>/previous-builds">see previous builds</a></p>
-			<hr />
-		</header>
-		<main>
-			<section class="profile">
-				<section class="profile__details">
-					<p class="profile__intro">
-						Hi, I&apos;m Simon an infrastructure consultant with +25 years
-						experience. I specialise in on-premises and cloud infrastructure
-						with a focus on security, scalability, and resilience.
-					</p>
-					<p class="profile__intro">
-						I also blend my infrastructure and software engineering skillsets to
-						perform devops activities.
-					</p>
-					<section class="profile__contact">
-						<h2 class="profile__contact__title">Contact Me</h2>
-						<p class="profile__contact-details"><span class="profile__contact-details__method">email<span class="profile__contact-details__method-colon">:</span></span><a href="mailto:simon.edwards@eastechnologyconsulting.com"> simon.edwards@eastechnologyconsulting.com</a></p>
-						<p class="profile__contact-details"><span class="profile__contact-details__method">mobile<span class="profile__contact-details__method-colon">:</span></span><a href="tel:+447825563000"> +44 (0)78255 63000</a></p>
-						<p class="profile__contact-details"><span class="profile__contact-details__method">github<span class="profile__contact-details__method-colon">:</span></span><a href="https://github.com/technologyconsulting"> technologyconsulting</a></p>
-					</section>
-				</section>
-				<section class="profile__skill-sets">
-					<h2>Skill Sets</h2>
-					<ul role="list">
-						<li class="profile__skill-sets__card">
-							<h3>Microsoft Stack</h3>
-							<ul>
-								<li>Active Directory Directory Services (ADDS)</li>
-							</ul>
-						</li>
-						<li class="profile__skill-sets__card">
-							<h3>Microsoft Azure</h3>
-							<ul>
-								<li>Azure Active Directory (AAD)</li>
-							</ul>
-						</li>
-						<li class="profile__skill-sets__card">
-							<h3>Microsoft 365</h3>
-							<ul>
-								<li>Exchange Online</li>
-								<li>SharePoint</li>
-								<li>Teams</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<section class="profile__projects">
-					<h2>Work Projects<span class="profile__projects--last__5__years"> - Last 5 Years</span></h2>
-					<ul role="list">
-						<li class="profile__projects__card">
-							<h3>Migrations</h3>
-							<ul>
-								<li>Azure Tenant to Tenant (Inc, AD, Exchange, Teams, SharePoint and Power Platform)</li>
-								<li>Exchange to Exchange Online</li>
-								<li>SharePoint to SharePoint Online</li>
-							</ul>
-						</li>
-						<li class="profile__projects__card">
-							<h3>Security</h3>
-							<ul>
-								<li>SIEM Provisioning & Onboarding</li>
-								<li>PAM Provisioning & Onboarding</li>
-								<li>Azure MFA, Password Protect, Self-Serivce Password Reset</li>
-								<li>Vulnerability Remediations</li>
-								<li>Security Agent Rollouts (EndPoint, Qualys, Cortex)</li>
-								<li>Web Application Firewall Deployment(s)</li>
-							</ul>
-						</li>
-						<li class="profile__projects__card">
-							<h3>Integrations</h3>
-							<ul>
-								<li>Workday to Active Directory (2 Clients)</li>
-								<li>GAL Sync with Exchange Hybrid, JML Processes, 30x Offices & 8000 - 10000 Users</li>
-								<li>Service Desk Tooling</li>
-								<li>Secure Data Transfer Tooling</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-				<section class="profile__work-history">
-					<h2>Work History <span class="profile__work-history--last__10__years"> - Last 10 Years</span></h2>
-					<p class="profile__work-history--previous"><a href="<%= handle %>/previous-work">see previous work</a></p>
-					<ul role="list">
-						<li class="profile__work-history__card">
-							<h3>Capita</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">08/08/22 - Current</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>Collabera Digital</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">08/07/24 - 02/08/24</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>South Somerset District Council</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">21/08/22 - 28/04/23</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>Grosvenor Group</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">11/10/21 - 15/04/22</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>Howden Group</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">27/06/18 - 30/09/21</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>HTB</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">20/11/17 - 25/05/18</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>Alere Inc</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">01/08/16 - 30/06/17</p>
-							</section>
-						</li>
-						<li class="profile__work-history__card">
-							<h3>Brunswick Group</h3>
-							<section class="profile__work-history__details">
-								<p class="profile__work-history__type">contract</p>
-								<p class="profile__work-history__date">09/12/13 - 15/07/16</p>
-							</section>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="training">
-				<h2>Training History</h2>
-				<p class="training--previous"><a href="<%= handle %>/previous-training">see previous training</a></p>
-				<ul role="list">
-					<h3 class="training__date">&gt; 2024</h3>
-					<li class="training__card">
-						<h2>Using VIM with Windows</h2>
-						<ul>
-
-							<li>Basic VIM installation</li>
-							<li>
-								Basic VIM plugins for editing HTML files. (Other file formats to
-								follow later)
-							</li>
-						</ul>
-					</li>
-					<li class="training__card">
-						<h2>Using Terraform with Azure / Azure DevOps</h2>
-						<ul>
-							<li>Installing Terraform</li>
-							<li>Using basic Terraform commands</li>
-							<li>Understanding Terraform variables</li>						
-						</ul>
-					</li>
-					<h3 class="training__date">&gt; 2023</h3>
-					<li class="training__card">
-						<h2>Using Webpack</h2>
-						<ul>
-							<li>Installing Webpack</li>
-							<li>Using Webpack as development server</li>
-							<li>Configuring basic bundling for HTML, CSS, Images & JavaScript files</li>
-							<li>Configuring for multiple entry points & routes</li>
-							<li>Configuring with Azure DevOps Pipelines</li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-		</main>
-	</body>
+    <!-- JavaScript -->
+    <!-- <script src="/bundle.js" defer></script> -->
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__profile-picture">
+        <section class="header__profile-picture--left">
+          <img
+            src="<%=require('../../../assets/9by16-simon-edwards-front.jpg')%>"
+            alt="Profile picture of Simon Edwards - Infrastructure Consultant"
+          />
+        </section>
+        <section class="header__profile-picture--right">
+          <h1 class="header__title--medium">
+            Simon Edwards -
+            <span class="header__title__subtitle--medium"
+              >Profile & Portfolio</span
+            >
+          </h1>
+          <h1 class="header__title--small">Simon Edwards</h1>
+          <p class="header__title--small header__title__subtitle--small">
+            Profile & Portfolio
+          </p>
+          <p class="profile__intro">
+            Hi, I&apos;m Simon an infrastructure consultant with +25 years
+            experience. I specialise in on-premises and cloud infrastructure
+            with a focus on security, scalability, and resilience.
+          </p>
+          <p class="profile__intro">
+            I also blend my infrastructure and software engineering skillsets to
+            perform devops activities.
+          </p>
+        </section>
+      </section>
+      <section class="header__profile-details">
+        <hr />
+        <p class="header__build--latest">
+          Latest: Built with HTML, CSS, JavaScript & Webpack, and deployed using
+          Terraform & Azure DevOps on Azure Static Web App.
+        </p>
+        <p class="header__build--previous">
+          <a href="<%= handle %>/previous-builds">see previous builds</a>
+        </p>
+        <hr />
+      </section>
+    </header>
+    <main>
+      <section class="profile">
+        <section class="profile__details">
+          <!-- <p class="profile__intro">
+            Hi, I&apos;m Simon an infrastructure consultant with +25 years
+            experience. I specialise in on-premises and cloud infrastructure
+            with a focus on security, scalability, and resilience.
+          </p>
+          <p class="profile__intro">
+            I also blend my infrastructure and software engineering skillsets to
+            perform devops activities.
+          </p> -->
+          <section class="profile__contact">
+            <h2 class="profile__contact__title">Contact Me</h2>
+            <p class="profile__contact-details">
+              <span class="profile__contact-details__method"
+                >email<span class="profile__contact-details__method-colon"
+                  >:</span
+                ></span
+              ><a href="mailto:simon.edwards@eastechnologyconsulting.com">
+                simon.edwards@eastechnologyconsulting.com</a
+              >
+            </p>
+            <p class="profile__contact-details">
+              <span class="profile__contact-details__method"
+                >mobile<span class="profile__contact-details__method-colon"
+                  >:</span
+                ></span
+              ><a href="tel:+447825563000"> +44 (0)78255 63000</a>
+            </p>
+            <p class="profile__contact-details">
+              <span class="profile__contact-details__method"
+                >github<span class="profile__contact-details__method-colon"
+                  >:</span
+                ></span
+              ><a href="https://github.com/technologyconsulting">
+                technologyconsulting</a
+              >
+            </p>
+          </section>
+        </section>
+        <section class="profile__skill-sets">
+          <h2>Skill Sets</h2>
+          <ul role="list">
+            <li class="profile__skill-sets__card">
+              <h3>Microsoft Stack</h3>
+              <ul>
+                <li>Active Directory Directory Services (ADDS)</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>Microsoft Azure</h3>
+              <ul>
+                <li>Azure Active Directory (AAD)</li>
+              </ul>
+            </li>
+            <li class="profile__skill-sets__card">
+              <h3>Microsoft 365</h3>
+              <ul>
+                <li>Exchange Online</li>
+                <li>SharePoint</li>
+                <li>Teams</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="profile__projects">
+          <h2>
+            Work Projects<span class="profile__projects--last__5__years">
+              - Last 5 Years</span
+            >
+          </h2>
+          <ul role="list">
+            <li class="profile__projects__card">
+              <h3>Migrations</h3>
+              <ul>
+                <li>
+                  Azure Tenant to Tenant (Inc, AD, Exchange, Teams, SharePoint
+                  and Power Platform)
+                </li>
+                <li>Exchange to Exchange Online</li>
+                <li>SharePoint to SharePoint Online</li>
+              </ul>
+            </li>
+            <li class="profile__projects__card">
+              <h3>Security</h3>
+              <ul>
+                <li>SIEM Provisioning & Onboarding</li>
+                <li>PAM Provisioning & Onboarding</li>
+                <li>
+                  Azure MFA, Password Protect, Self-Serivce Password Reset
+                </li>
+                <li>Vulnerability Remediations</li>
+                <li>Security Agent Rollouts (EndPoint, Qualys, Cortex)</li>
+                <li>Web Application Firewall Deployment(s)</li>
+              </ul>
+            </li>
+            <li class="profile__projects__card">
+              <h3>Integrations</h3>
+              <ul>
+                <li>Workday to Active Directory (2 Clients)</li>
+                <li>
+                  GAL Sync with Exchange Hybrid, JML Processes, 30x Offices &
+                  8000 - 10000 Users
+                </li>
+                <li>Service Desk Tooling</li>
+                <li>Secure Data Transfer Tooling</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="profile__work-history">
+          <h2>
+            Work History
+            <span class="profile__work-history--last__10__years">
+              - Last 10 Years</span
+            >
+          </h2>
+          <p class="profile__work-history--previous">
+            <a href="<%= handle %>/previous-work">see previous work</a>
+          </p>
+          <ul role="list">
+            <li class="profile__work-history__card">
+              <h3>Capita</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">08/08/22 - Current</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>Collabera Digital</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">08/07/24 - 02/08/24</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>South Somerset District Council</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">21/08/22 - 28/04/23</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>Grosvenor Group</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">11/10/21 - 15/04/22</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>Howden Group</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">27/06/18 - 30/09/21</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>HTB</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">20/11/17 - 25/05/18</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>Alere Inc</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">01/08/16 - 30/06/17</p>
+              </section>
+            </li>
+            <li class="profile__work-history__card">
+              <h3>Brunswick Group</h3>
+              <section class="profile__work-history__details">
+                <p class="profile__work-history__type">contract</p>
+                <p class="profile__work-history__date">09/12/13 - 15/07/16</p>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="training">
+        <h2>Training History</h2>
+        <p class="training--previous">
+          <a href="<%= handle %>/previous-training">see previous training</a>
+        </p>
+        <ul role="list">
+          <h3 class="training__date">&gt; 2024</h3>
+          <li class="training__card">
+            <h2>Using VIM with Windows</h2>
+            <ul>
+              <li>Basic VIM installation</li>
+              <li>
+                Basic VIM plugins for editing HTML files. (Other file formats to
+                follow later)
+              </li>
+            </ul>
+          </li>
+          <li class="training__card">
+            <h2>Using Terraform with Azure / Azure DevOps</h2>
+            <ul>
+              <li>Installing Terraform</li>
+              <li>Using basic Terraform commands</li>
+              <li>Understanding Terraform variables</li>
+            </ul>
+          </li>
+          <h3 class="training__date">&gt; 2023</h3>
+          <li class="training__card">
+            <h2>Using Webpack</h2>
+            <ul>
+              <li>Installing Webpack</li>
+              <li>
+                Using Webpack as development server (hot, liveReload,
+                watchFiles)
+              </li>
+              <li>
+                Configuring basic bundling for HTML, CSS, Images & JavaScript
+                files
+              </li>
+              <li>Configuring for multiple entry points & routes</li>
+              <li>Configuring with Azure DevOps Pipelines</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
