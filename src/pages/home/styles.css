@@ -1,3 +1,14 @@
+/* Variables Start */
+
+:root {
+  --color-primary: #1188fc;
+  --color-accent: #30d030;
+}
+
+/* Variables End */
+
+/* Reset Start */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -102,6 +113,8 @@ select {
   }
 }
 
+/* Reset End */
+
 body {
   display: flex;
   flex-direction: column;
@@ -122,7 +135,7 @@ section {
 }
 
 h2 {
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 hr {
@@ -139,6 +152,35 @@ hr {
   margin-bottom: 0rem;
 }
 
+.header__logo__bar::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  height: 1.2rem;
+  width: 0.35rem;
+  margin-top: 0.2rem;
+  margin-left: -1.25rem;
+  background-color: #1188fc;
+  opacity: 0.8;
+  transform: skew(-30deg, 0);
+}
+
+.header__logo__bar:nth-child(2)::before {
+  opacity: 0.8;
+  margin-left: 0.05rem;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-accent)
+  );
+}
+
+.header__logo__bar:nth-child(3)::before {
+  opacity: 0.8;
+  margin-left: 0.05rem;
+  background-color: var(--color-accent);
+}
+
 .header__contact-us {
   width: 100%;
   margin-top: 1rem;
@@ -151,14 +193,14 @@ hr {
   text-align: center;
   padding: 10px 20px;
   color: white;
-  background: forestgreen;
+  background: var(--color-accent);
   cursor: pointer;
   border-radius: 5px;
 }
 
 .header__title--small {
   display: block;
-  color: forestgreen;
+  color: var(--color-accent);
   font-size: 1.75rem;
   text-align: center;
 }
@@ -172,6 +214,11 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .header__logo__bar::before {
+    height: 1.05rem;
+    margin-left: 0.25rem;
   }
 
   .header__contact-us {
@@ -191,7 +238,7 @@ hr {
 
   .header__title--medium {
     display: block;
-    color: forestgreen;
+    color: var(--color-accent);
   }
 
   .header__contact-us a {
@@ -200,13 +247,13 @@ hr {
 }
 
 .header__title__subtitle--medium {
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 .header__title__subtitle--small {
   font-size: 1.75rem;
   font-weight: bold;
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 .header__build--latest {
@@ -220,7 +267,7 @@ hr {
   font-size: 1rem;
   font-weight: 700;
   font-variant: small-caps;
-  color: forestgreen;
+  color: var(--color-accent);
 }
 
 .header__build--previous::after {
@@ -262,7 +309,7 @@ hr {
   text-align: center;
   padding: 10px 20px;
   color: white;
-  background: forestgreen;
+  background: var(--color-accent);
   cursor: pointer;
   border-radius: 5px;
 }

@@ -1,3 +1,14 @@
+/* Variables Start */
+
+:root {
+  --color-primary: #1188fc;
+  --color-accent: #30d030;
+}
+
+/* Variables End */
+
+/* Reset Start */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -93,6 +104,8 @@ select {
   }
 }
 
+/* Reset End */
+
 body {
   font-family: "Poppins", serif;
   max-width: 1140px;
@@ -125,7 +138,7 @@ section {
 }
 
 h2 {
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 .header {
@@ -146,7 +159,7 @@ h2 {
   float: left;
   max-width: 5rem;
   margin: 0.25rem 0.5rem 0.5rem 0;
-  border: 5px solid forestgreen;
+  border: 5px solid var(--color-accent);
 }
 
 .header__profile-details {
@@ -166,13 +179,13 @@ h2 {
 .header__title__subtitle--medium {
   font-size: 1.75rem;
   font-weight: bold;
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 .header__title__subtitle--small {
   font-size: 1.175rem;
   font-weight: bold;
-  color: royalblue;
+  color: var(--color-primary);
 }
 
 @media (min-width: 602px) {
@@ -197,7 +210,7 @@ h2 {
   font-size: 1rem;
   font-weight: 700;
   font-variant: small-caps;
-  color: forestgreen;
+  color: var(--color-accent);
 }
 
 .header__build--previous::after {
@@ -244,7 +257,7 @@ h2 {
 .profile__contact-details__method {
   width: fit-content;
   color: whitesmoke;
-  background-color: forestgreen;
+  background-color: var(--color-accent);
   padding: 0rem 0.5rem 0.2rem 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -303,7 +316,7 @@ h2 {
 #tab1:checked,
 #tab2:checked {
   color: white;
-  background: forestgreen;
+  background: var(--color-accent);
   border: 1px solid #ddd;
   border-bottom: 1px solid #fff;
 }
@@ -311,8 +324,8 @@ h2 {
 #tab1:checked + label,
 #tab2:checked + label {
   color: white;
-  background: forestgreen;
-  border: 1px solid forestgreen;
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .profile__skill-sets__card {
@@ -359,7 +372,7 @@ h2 {
 .profile__work-history__type {
   width: fit-content;
   color: whitesmoke;
-  background-color: forestgreen;
+  background-color: var(--color-accent);
   padding: 0rem 0.5rem 0.2rem 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
@@ -382,7 +395,7 @@ h2 {
   font-size: 1rem;
   font-weight: 700;
   font-variant: small-caps;
-  color: forestgreen;
+  color: var(--color-accent);
 }
 
 .profile__work-history--previous::after {
@@ -403,7 +416,7 @@ h2 {
   font-size: 1rem;
   font-weight: 700;
   font-variant: small-caps;
-  color: forestgreen;
+  color: var(--color-accent);
 }
 
 .training--previous::after {
