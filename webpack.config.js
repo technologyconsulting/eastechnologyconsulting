@@ -3,7 +3,6 @@ const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { watchFile } = require("fs");
 
 const generateEntryPoints = () => {
   const entries = {};
