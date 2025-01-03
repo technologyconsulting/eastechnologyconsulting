@@ -3,6 +3,16 @@
 :root {
   --color-primary: #1188fc;
   --color-accent: #30d030;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --bg-color: #333333;
+  --heading-color: #ffffff;
+  --text-color: #ffffff;
+  --color-accent: forestgreen;
 }
 
 /* Variables End */
@@ -111,6 +121,8 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0.5rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 a,
@@ -308,6 +320,11 @@ h2 {
   margin-top: -1px !important;
 }
 
+#tab1 + label,
+#tab2 + label {
+  color: black;
+}
+
 #tab1:checked ~ #tab1-content,
 #tab2:checked ~ #tab2-content {
   display: block;
@@ -315,7 +332,7 @@ h2 {
 
 #tab1:checked,
 #tab2:checked {
-  color: white;
+  color: black;
   background: var(--color-accent);
   border: 1px solid #ddd;
   border-bottom: 1px solid #fff;
@@ -335,7 +352,7 @@ h2 {
 .profile__projects--last__5__years {
   font-size: 1rem;
   font-weight: 400;
-  color: black;
+  color: var(--text-color);
 }
 
 .profile__projects__card:first-child {
@@ -353,7 +370,7 @@ h2 {
 .profile__work-history--last__10__years {
   font-size: 1rem;
   font-weight: 400;
-  color: black;
+  color: var(--text-color);
 }
 
 .profile__work-history__card:first-child {

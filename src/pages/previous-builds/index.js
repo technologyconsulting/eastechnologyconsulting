@@ -1,2 +1,2 @@
-import '../home/styles.css';
-import './styles.css';
+import "../home/index.js";
+import "./styles.css";

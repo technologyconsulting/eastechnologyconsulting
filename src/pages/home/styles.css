@@ -3,6 +3,16 @@
 :root {
   --color-primary: #1188fc;
   --color-accent: #30d030;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --bg-color: #333333;
+  --heading-color: #ffffff;
+  --text-color: #ffffff;
+  --color-accent: forestgreen;
 }
 
 /* Variables End */
@@ -115,6 +125,66 @@ select {
 
 /* Reset End */
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button__toggle {
+  min-width: 2.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make the label the clickable area */
+.button__toggle {
+  z-index: 1; /* Ensure the label stays clickable */
+}
+
+/* Hide radio buttons but keep them functional */
+.button__toggle input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+/* Hide all icons by default */
+.button__icon {
+  display: none;
+  pointer-events: none; /* Prevents icon from blocking clicks */
+}
+
+/* Show only relevant icon based on theme */
+html[data-theme="dark"] .button__toggle .fa-sun {
+  display: inline-block;
+}
+
+html[data-theme="light"] .button__toggle--sun,
+html[data-theme="light"] .fa-sun {
+  display: none;
+}
+
+html[data-theme="light"] .button__toggle .fa-moon {
+  display: inline-block;
+}
+
+html[data-theme="dark"] .button__toggle--moon,
+html[data-theme="dark"] .fa-moon {
+  display: none;
+}
+
+/* Hover effect */
+.button__toggle:hover .button__icon {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -122,6 +192,8 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0.5rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 main {
