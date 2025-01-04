@@ -127,7 +127,7 @@ select {
 
 .theme-toggle {
   position: absolute;
-  top: 5px;
+  top: -4px;
   right: 0px;
   align-items: center;
 }
@@ -165,6 +165,7 @@ select {
 /* Show only relevant icon based on theme */
 html[data-theme="dark"] .button__toggle .fa-sun {
   display: inline-block;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 html[data-theme="light"] .button__toggle--sun,
@@ -174,6 +175,7 @@ html[data-theme="light"] .fa-sun {
 
 html[data-theme="light"] .button__toggle .fa-moon {
   display: inline-block;
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 html[data-theme="dark"] .button__toggle--moon,
@@ -301,7 +303,7 @@ hr {
 
 @media (min-width: 585px) {
   .theme-toggle {
-    top: 15px;
+    top: 2px;
     right: 0px;
   }
 
