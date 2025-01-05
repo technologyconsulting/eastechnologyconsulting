@@ -1,7 +1,31 @@
 .build__card:first-child {
-	margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .build__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
+  box-shadow: var(--card-shadow);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.build__card:hover {
+  background-color: var(--card-hover);
+  color: var(--card-hover-text);
+}
+
+.build__card__date {
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
+}
+
+.build__card__title {
+  font-size: clamp(1.125rem, 5vw, 1.5rem);
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+.build__card__item {
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
 }

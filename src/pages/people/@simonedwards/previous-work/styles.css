@@ -1,61 +1,57 @@
 .profile__work-history {
-	width: 100%;
+  width: 100%;
 }
 
 .profile__work-history--last__10__years {
-	font-size: 1rem;
-	font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .profile__work-history__card:first-child {
-	margin-top: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .profile__work-history__card {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .profile__work-history__details {
-	display: flex;
-	margin: 0;
+  display: flex;
+  margin: 0;
 }
 
 .profile__work-history__type {
-	width: fit-content;
-	color: whitesmoke;
-	background-color:forestgreen;
-	padding: 0rem 0.5rem 0.2rem 0.5rem;
-	border-radius: 10px;
-	font-size: 1rem;
-	font-weight: 700;
-	font-variant: small-caps;
-	
-
+  width: fit-content;
+  color: whitesmoke;
+  background-color: var(--color-accent);
+  padding: 0rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
 }
 
 .profile__work-history__type-colon {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .profile__work-history__date {
-	flex: 1;
-	text-align: end;
-	margin: auto 0;
-	
+  flex: 1;
+  text-align: end;
+  margin: auto 0;
 }
 
 .profile__work-history--previous {
-	position: relative;
-	font-size: 1rem;
-	font-weight:700;
-	font-variant: small-caps;
-	margin-top: 1rem;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  margin-top: 1rem;
 }
 
 .profile__work-history--previous::after {
-	content: "->";
-	position: absolute;
-	top: 2px;
-	left: 125px;
+  content: "->";
+  position: absolute;
+  top: 2px;
+  left: 125px;
 }
-

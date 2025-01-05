@@ -5,6 +5,9 @@
   --color-accent: #30d030;
   --bg-color: #ffffff;
   --text-color: #000000;
+  --card-hover-text: #ffffff;
+  --card-shadow: inset -1px -1px 5px -2px rgba(0, 0, 0, 0.4);
+  --card-hover: rgba(33, 33, 33, 1);
 }
 
 /* Dark theme variables */
@@ -12,7 +15,9 @@
   --bg-color: #333333;
   --heading-color: #ffffff;
   --text-color: #ffffff;
-  --color-accent: forestgreen;
+  --color-accent: #30d030;
+  --card-shadow: inset -1px -1px 5px -1px rgba(255, 255, 255, 0.4);
+  --card-hover: rgba(250, 252, 255, 0.1);
 }
 
 /* Variables End */
@@ -182,6 +187,7 @@ h2 {
 
 .header__title--small {
   display: block;
+  font-size: clamp(1rem, calc(4vw + 0.0125rem), 1.25rem);
 }
 
 .header__title--medium {
@@ -195,7 +201,7 @@ h2 {
 }
 
 .header__title__subtitle--small {
-  font-size: 1.175rem;
+  font-size: clamp(1rem, calc(4vw + 0.0125rem), 1.25rem);
   font-weight: bold;
   color: var(--color-primary);
 }
