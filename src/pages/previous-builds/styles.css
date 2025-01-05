@@ -1,7 +1,17 @@
 .header {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+}
+
+.header__title {
+  display: flex;
   align-items: center;
+  min-height: 2.75rem;
+}
+
+.header__title--medium {
+  height: 2.25rem;
 }
 
 .header__nav {
@@ -20,4 +30,28 @@
 
 .build__card {
   margin-top: 1rem;
+  box-shadow: var(--card-shadow);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.build__card:hover {
+  background-color: var(--card-hover);
+  color: var(--card-hover-text);
+}
+
+.build__card__date {
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
+}
+
+.build__card__title {
+  font-size: clamp(1.125rem, 5vw, 1.5rem);
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+.build__card__item {
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  font-weight: 400;
 }
