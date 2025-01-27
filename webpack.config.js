@@ -151,9 +151,30 @@ module.exports = {
           to: (context) => `${context.parsedUrl.pathname}/index.html`,
         },
 
+        // For nested paths like /people/@handle
+        {
+          from: /^\/[\w-]+\/@[\w-]+$/,
+          to: (context) => {
+            const path = context.parsedUrl.pathname;
+            const handlePart = path.split('/').pop();
+            return `/${handlePart}/index.html`;
+          }
+        },
+
+        // For nested paths with @handles and additional subpaths (like /people/@handle/previous-builds)
+        {
+          from: /^\/[\w-]+\/@[\w-]+\/[\w-]+$/,
+          to: (context) => {
+            const path = context.parsedUrl.pathname;
+            const [_, handle, subpath] = path.match(/\/@([\w-]+)\/([\w-]+)$/);
+            return `/@${handle}/${subpath}/index.html`;
+          }
+        },
+
         // For other pages
         {
-          from: /^\/[^@][^/]+$/,
+          // from: /^\/[^@][^/]+$/,
+          from: /./,
           to: (context) => `${context.parsedUrl.pathname}/index.html`,
         },
       ],
