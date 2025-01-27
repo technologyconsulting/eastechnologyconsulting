@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-  - master
+  - main
 
 pool:
   vmImage: ubuntu-latest
@@ -15,4 +15,4 @@ steps:
       app_location: "/"
       output_location: "dist"
       azure_static_web_apps_api_token: $(DEPLOYMENT_TOKEN)
-      production_branch: "master"
+      production_branch: "main"
